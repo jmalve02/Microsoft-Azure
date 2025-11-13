@@ -1,0 +1,17 @@
+Speech-to-Text Using Azure Speech Services
+
+🗣️ Overview
+Azure Speech Services convert spoken audio into text, enabling voice-controlled applications and transcription.
+
+Program:
+import azure.cognitiveservices.speech as speechsdk
+
+speech_key = "9VZbnCZ0CCm4xYTKTslmLzPKe588visu9MWrqofpGRSphcgRDhchJQQJ99BKACGhslBXJ3w3AAAYACOGIxSE"
+service_region = "centralindia"
+
+speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
+audio_config = speechsdk.audio.AudioConfig(filename="sample.wav")
+speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
+
+result = speech_recognizer.recognize_once()
+print("Recognized text:", result.text)
