@@ -10,3 +10,9 @@ Installing and configure Azure CLI / Azure PowerShell
 Creating and manage Azure resources from the command line
 
 Automate deployments using scripts
+Step1- Login into azure Portal:
+command- az login
+Step2- Create a Resource Group:
+command- az group create --name MyResourceGroup --location eastus
+Step3- Create a Virtual Machine:
+az vm create --resource-group MyResourceGroup --name MyVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
