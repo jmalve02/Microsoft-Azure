@@ -1,0 +1,23 @@
+Explore Microsoft Azure Portal and Core Cloud Services
+🔍 Overview
+
+The Azure Portal is a web-based interface for creating, managing, and monitoring Azure resources.
+It provides access to services such as Virtual Machines, Storage, Networking, Databases, AI, and more.
+
+🧭 Objectives
+
+Understand the Azure Portal interface
+
+Explore Resource Groups, Subscriptions, and Service Catalog
+
+Create basic resources (like a Virtual Machine, Storage Account, or Web App)
+
+Learn about Azure Resource Manager (ARM) concepts
+
+🧰 Example Tasks
+
+Creating a Resource Group
+
+Deploying a Virtual Machine from the Portal
+
+Using Azure Monitor to check metrics and logs
