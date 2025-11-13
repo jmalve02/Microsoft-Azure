@@ -1,0 +1,26 @@
+Image Tagging Using Azure Computer Vision
+🧠 Overview
+
+The Azure Computer Vision API can analyze images to extract information such as tags, objects, and descriptions.
+
+🎯 Objectives
+
+Use the Computer Vision API
+
+Automatically generate tags for images
+
+Understand JSON response data
+
+Program- 
+from azure.cognitiveservices.vision.computervision import ComputerVisionClient
+from msrest.authentication import CognitiveServicesCredentials
+
+endpoint = "https://centralindia.api.cognitive.microsoft.com/"
+key = "9VZbnCZ0CCm4xYTKTslmLzPKe588visu9MWrqofpGRSphcgRDhchJQQJ99BKACGhslBXJ3w3AAAYACOGIxSE"
+
+client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(key))
+image_url = "https://example.com/image.jpg"
+
+tags_result = client.tag_image(image_url)
+for tag in tags_result.tags:
+    print(f"{tag.name} (confidence: {tag.confidence:.2f})")
