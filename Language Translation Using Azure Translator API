@@ -1,0 +1,22 @@
+Language Translation Using Azure Translator API
+
+🌐 Overview
+The Translator API allows automatic translation between multiple languages in real time.
+
+Program:
+import requests, json
+
+key = "9VZbnCZ0CCm4xYTKTslmLzPKe588visu9MWrqofpGRSphcgRDhchJQQJ99BKACGhslBXJ3w3AAAYACOGIxSE"
+endpoint = "https://centralindia.api.cognitive.microsoft.com/"
+path = '/translate?api-version=3.0'
+params = '&to=fr'
+constructed_url = endpoint + path + params
+
+headers = {
+    'Ocp-Apim-Subscription-Key': key,
+    'Content-type': 'application/json'
+}
+
+body = [{'text': 'Hello, how are you?'}]
+response = requests.post(constructed_url, headers=headers, json=body)
+print(json.dumps(response.json(), indent=2))
