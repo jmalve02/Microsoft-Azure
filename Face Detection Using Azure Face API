@@ -1,0 +1,18 @@
+Face Detection Using Azure Face API
+
+😃 Overview
+The Azure Face API detects and analyzes human faces in images — identifying attributes like age, emotion, and facial landmarks.
+
+Program:
+from azure.cognitiveservices.vision.face import FaceClient
+from msrest.authentication import CognitiveServicesCredentials
+
+key = "9VZbnCZ0CCm4xYTKTslmLzPKe588visu9MWrqofpGRSphcgRDhchJQQJ99BKACGhslBXJ3w3AAAYACOGIxSE"
+endpoint = "https://centralindia.api.cognitive.microsoft.com/"
+
+face_client = FaceClient(endpoint, CognitiveServicesCredentials(key))
+image_url = "https://example.com/person.jpg"
+
+faces = face_client.face.detect_with_url(url=image_url, return_face_attributes=['age','emotion'])
+for face in faces:
+    print(f"Detected face with age {face.face_attributes.age} and emotion {face.face_attributes.emotion.as_dict()}")
