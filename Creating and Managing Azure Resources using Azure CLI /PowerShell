@@ -1,0 +1,12 @@
+Creating and Managing Azure Resources using Azure CLI / PowerShell
+🖥️ Overview
+
+Azure CLI and PowerShell are powerful command-line tools for automating Azure resource management.
+
+⚙️ Objectives
+
+Installing and configure Azure CLI / Azure PowerShell
+
+Creating and manage Azure resources from the command line
+
+Automate deployments using scripts
