@@ -1,0 +1,22 @@
+Intro to Azure Machine Learning – Create and Explore a Workspace
+
+🤖 Overview
+Azure Machine Learning (Azure ML) is a cloud-based environment for training, deploying, and managing ML models.
+
+🎯 Objectives
+Create an Azure ML Workspace
+Explore the Azure ML Studio
+Use Datasets, Compute Instances, and Pipelines
+
+Program:
+from azureml.core import Workspace
+
+ws = Workspace.create(
+    name='my_ml_workspace',
+    subscription_id='lab87981521770',
+    resource_group='MyResourceGroup',
+    create_resource_group=True,
+    location='eastus'
+)
+
+print("Workspace created:", ws.name)
