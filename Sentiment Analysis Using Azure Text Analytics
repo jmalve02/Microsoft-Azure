@@ -1,0 +1,16 @@
+Sentiment Analysis Using Azure Text Analytics
+
+💬 Overview
+The Text Analytics API provides NLP features such as sentiment analysis, key phrase extraction, and language detection.
+
+Program:
+from azure.ai.textanalytics import TextAnalyticsClient, AzureKeyCredential
+
+endpoint = "https://centralindia.api.cognitive.microsoft.com/"
+key = "9VZbnCZ0CCm4xYTKTslmLzPKe588visu9MWrqofpGRSphcgRDhchJQQJ99BKACGhslBXJ3w3AAAYACOGIxSE"
+
+client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+
+documents = ["I love using Azure AI services!"]
+response = client.analyze_sentiment(documents=documents)[0]
+print(f"Sentiment: {response.sentiment}, Score: {response.confidence_scores}")
